@@ -1,0 +1,46 @@
+div{
+  height:50px;
+  margin-bottom: 10px;
+  background: pink;
+}
+
+// @for $i from 1 through 5{
+//   div:nth-of-type(#{$i}){
+//     width:50px * $i //50씩 증가
+//   }
+// }
+
+@for $i from 1 to 5{
+  div:nth-of-type(#{$i}){
+    width:50px * $i //50씩 증가
+  }
+}
+
+// List
+$color:#a3cae0 #e7a0a0 #94d194;
+
+article{
+  h2:nth-child(1){color:nth($color,1)}
+  h2:nth-child(2){color:nth($color,2)}
+  h2:nth-child(3){color:nth($color,3)}
+}
+
+$fontSize:("small":12px, "medium":18px, "large":24px);
+section{
+  h2:nth-child(1){font-size:map-get($fontSize,'small')}
+  h2:nth-child(2){font-size:map-get($fontSize,'medium')}
+  h2:nth-child(3){font-size:map-get($fontSize,'large')}
+}
+
+// while
+$i:1;
+.list01 > li{
+  background: orange;
+  margin-bottom: 10px;
+  @while $i <= 3{ //3번 반복
+    &:nth-child(#{$i}){
+      width:100px * $i;
+    }
+    $i:$i+1;
+  }
+}

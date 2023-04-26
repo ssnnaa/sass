@@ -1,0 +1,49 @@
+$width1:1920px;
+$width2:1025px;
+$width3:1024px;
+$width4:768px;
+$width5:767px;
+
+@mixin header($h:123px){
+  background: lightblue;
+  height: $h;
+  text-align: center;
+  line-height: $h;
+  font-weight: bold;
+}
+
+@mixin visual($vh:300px){
+  background: #b4caa8;
+  height:$vh;
+  text-align: center;
+  line-height: $vh;
+}
+
+@mixin section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@mixin article($s2h:270px, $s2w:280px, $bg:#e67a7a){
+  height:$s2h;
+  width:$s2w;
+  background: $bg;
+  margin:10px 5px;
+}
+
+@mixin footer(){
+  
+}
+
+@media screen and (min-width:$width2) and (max-width:$width1){
+
+}
+
+@media screen and (min-width:$width4) and (max-width:$width3){
+
+}
+
+@media screen and (max-width:$width5){
+
+}

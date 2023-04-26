@@ -1,0 +1,59 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+$font:'Pretendard', '맑은 고딕', arial, sans-serif;
+$bw:600px;
+
+*{
+  margin:0px;
+  padding:0px;
+}
+
+ul,li,ol{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color:#5a8b59;
+}
+
+.tab{
+  width:$bw;
+  margin: 50px auto;
+  ul{
+    width:$bw;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  li{
+    a{
+      font-weight:bold;
+      font-family: $font;
+      padding:5px 10px;
+      background: #cadfc9;
+    }
+    div{
+      width:$bw;
+      height:400px;
+      position: absolute;
+      left:0px;
+      top:40px;
+      display: none;
+      img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+}
+
+.on > div{
+  display:block !important;
+}
+
+.on > a{
+  background: #5a8b59 !important;
+  color: #fff;
+}

@@ -1,0 +1,40 @@
+@mixin l_btn($c:#ce0303, $fc:#fff){
+  border:none;
+  width:250px;
+  height:60px;
+  background: $c;
+  position: relative;
+  color:$fc;
+  font-weight: bold;
+}
+
+@mixin icon($t:0px 0px, $b:600px, $bg:#fff){
+  background: $bg;
+  background-image: url(../images/sns_icon.png);
+  width:40px;
+  height:40px;
+  background-position: $t;
+  background-size: $b;
+  position: absolute;
+  top:10px;
+  left:20px;
+}
+  .base{
+    @include l_btn;
+  }
+  .naver{
+    @include l_btn($c:#47B748);
+    text-indent: 60px;
+  }
+  .kakao{
+    @include l_btn($c:#FFE800, $fc:#333);
+    text-indent: 60px;
+  }
+
+  .n_icon{
+    @include icon($t:-418px -95px, $b:700px);
+
+  }
+  .k_icon{
+    @include icon($t:-93px -200px, $b:550px);
+  }
